@@ -56,3 +56,19 @@ pytest -vvv -s tests/
 # pytest --cov
 # open htmlcov/index.html
 ```
+
+## Run using Docker
+
+Build the docker image using the following command
+
+```
+docker-compose build
+```
+
+Run the docker container using the following command
+
+```
+docker-compose up
+```
+
+The server will be running on `http://localhost:7755`
