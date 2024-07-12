@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: flask-image
+    container_name: flask-container
+    restart: unless-stopped
+    ports:
+      - "7755:7755"
+    environment:
+      - FLASK_APP=core/server.py
+    volumes:
+      - .:/app
+    command: bash run.sh
